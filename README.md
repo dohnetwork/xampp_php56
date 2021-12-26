@@ -59,6 +59,9 @@ $ docker build -t cswl/xampp .
 ## License
 
 The scripts and Dockerfile are licensed under the GPL-3.0 license.
+www
+/opt/lampp/htdocs    /www 
+
 
 The Dockerfile was made with refrences from :
 
