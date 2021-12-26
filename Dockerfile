@@ -50,7 +50,7 @@ EXPOSE 80 443 3306
 
 ADD init.sh /usr/local/bin/init.sh
 RUN chmod 777 /usr/local/bin/init.sh
-
+HEALTHCHECK --interval=120s --timeout=20s --retries=3 CMD curl -sS 127.0.0.1:80 || exit 1
 # Start the init script
 ENTRYPOINT ["/usr/local/bin/init.sh"]
 
